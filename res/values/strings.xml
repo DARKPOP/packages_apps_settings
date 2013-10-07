@@ -6000,7 +6000,7 @@
     <string name="navigation_bar_height_24">24dp</string>
     <string name="navigation_bar_height_20">20dp</string>
     <string name="navigation_bar_height_0">0dp (hide)</string>
- 
+
     <!-- Status bar-->
     <string name="status_bar_general_category">General</string>
     <string name="status_bar_title">Status bar</string>
@@ -6138,7 +6138,7 @@
     <!-- Setting checkbox summary for displaying USB debugging notification -->
     <string name="adb_notify">USB debugging notify</string>
     <string name="adb_notify_summary">Display a notification when USB debugging is connected</string>
-  
+
     <!-- Notification light dialogs -->
     <string name="edit_light_settings">Edit light settings</string>
     <string name="pulse_speed_title">Pulse length and speed</string>
@@ -6225,7 +6225,7 @@
     <!-- Status bar | Clock -->
     <string name="status_bar_clock">Clock &amp; date</string>
     <string name="status_bar_clock_title">Clock &amp; date style</string>
-    <string name="status_bar_clock_summary">Change various clock &amp; date options</string> 
+    <string name="status_bar_clock_summary">Change various clock &amp; date options</string>
     <string name="clock_title_enable">Alignment</string>
     <string name="clock_enabled">Enabled</string>
     <string name="clock_disabled">Disabled</string>
@@ -6356,4 +6356,14 @@
     <!-- Clear all recents on navbar enabler strings -->
     <string name="clear_all_recents_navbar_enabled_title">Clear all recents button on nav bar</string>
     <string name="clear_all_recents_navbar_enabled_summary">Show clear all recents button on navigation bar</string>
+
+    <!-- Partition Info -->
+    <string name="partition_info_title">Partition info</string>
+    <string name="partition_info_system">/system</string>
+    <string name="partition_info_data">/data</string>
+    <string name="partition_info_cache">/cache</string>
+    <string name="partition_info_sdcard">/sdcard (FAT)</string>
+    <string name="partition_info_sdext">/sd-ext (EXT)</string>
+    <string name="partition_info_used_of">/</string>
+
 </resources>
