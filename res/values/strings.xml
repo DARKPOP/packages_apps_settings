@@ -6062,4 +6062,8 @@
     <!-- App Ops -->
     <string name="app_ops_title">App Ops</string>
     <string name="app_ops_summary">Fine-grained application permission controls</string>
+
+    <!--Quick unlock -->
+    <string name="unlock_quick_unlock_control_title">Quick unlock</string>
+    <string name="unlock_quick_unlock_control_summary">Unlock automatically when the correct PIN/password is entered</string>
 </resources>
