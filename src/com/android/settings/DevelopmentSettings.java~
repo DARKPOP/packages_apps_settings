@@ -324,9 +324,14 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
             removePreference(mEnableOemUnlock);
             mEnableOemUnlock = null;
         }
-        mQuickBoot= findAndInitCheckboxPref(ENABLE_QUICKBOOT);
+<<<<<<< HEAD
         mAllowMockLocation = findAndInitSwitchPref(ALLOW_MOCK_LOCATION);
         mDebugViewAttributes = findAndInitSwitchPref(DEBUG_VIEW_ATTRIBUTES);
+=======
+        mQuickBoot= findAndInitCheckboxPref(ENABLE_QUICKBOOT);
+        mAllowMockLocation = findAndInitCheckboxPref(ALLOW_MOCK_LOCATION);
+        mDebugViewAttributes = findAndInitCheckboxPref(DEBUG_VIEW_ATTRIBUTES);
+>>>>>>> 069557f... QuickBoot: enable QuickBoot Settings UI
         mPassword = (PreferenceScreen) findPreference(LOCAL_BACKUP_PASSWORD);
         mAllPrefs.add(mPassword);
         mAdvancedReboot = findAndInitSwitchPref(ADVANCED_REBOOT_KEY);
