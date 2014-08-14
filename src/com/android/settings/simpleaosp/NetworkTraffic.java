@@ -10,9 +10,9 @@
 
 package com.android.settings.simpleaosp;
 
+import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
-import android.content.ContentResolver;
 import android.content.res.Resources;
 import android.net.TrafficStats;
 import android.os.Bundle;
@@ -40,17 +40,17 @@ public class NetworkTraffic extends SettingsPreferenceFragment
     private static final String TAG = "NetworkTraffic";
 
     private static final String NETWORK_TRAFFIC_STATE = "network_traffic_state";
-    private static final String NETWORK_TRAFFIC_COLOR = "network_traffic_color";
     private static final String NETWORK_TRAFFIC_UNIT = "network_traffic_unit";
     private static final String NETWORK_TRAFFIC_PERIOD = "network_traffic_period";
     private static final String NETWORK_TRAFFIC_AUTOHIDE = "network_traffic_autohide";
     private static final String NETWORK_TRAFFIC_AUTOHIDE_THRESHOLD = "network_traffic_autohide_threshold";
+    private static final String NETWORK_TRAFFIC_COLOR = "network_traffic_color";
 
     private ListPreference mNetTrafficState;
-    private ColorPickerPreference mNetTrafficColor;
     private ListPreference mNetTrafficUnit;
     private ListPreference mNetTrafficPeriod;
     private CheckBoxPreference mNetTrafficAutohide;
+    private ColorPickerPreference mNetTrafficColor;
     private SeekBarPreference mNetTrafficAutohideThreshold;
 
     private static final int MENU_RESET = Menu.FIRST;
@@ -71,7 +71,6 @@ public class NetworkTraffic extends SettingsPreferenceFragment
         loadResources();
 
         PreferenceScreen prefSet = getPreferenceScreen();
-	ContentResolver resolver = getActivity().getContentResolver();
 
         mNetTrafficState = (ListPreference) prefSet.findPreference(NETWORK_TRAFFIC_STATE);
         mNetTrafficUnit = (ListPreference) prefSet.findPreference(NETWORK_TRAFFIC_UNIT);
@@ -127,11 +126,13 @@ public class NetworkTraffic extends SettingsPreferenceFragment
     private void updateNetworkTrafficState(int mIndex) {
         if (mIndex <= 0) {
             mNetTrafficUnit.setEnabled(false);
+            mNetTrafficColor.setEnabled(false);
             mNetTrafficPeriod.setEnabled(false);
             mNetTrafficAutohide.setEnabled(false);
             mNetTrafficAutohideThreshold.setEnabled(false);
         } else {
             mNetTrafficUnit.setEnabled(true);
+            mNetTrafficColor.setEnabled(true);
             mNetTrafficPeriod.setEnabled(true);
             mNetTrafficAutohide.setEnabled(true);
             mNetTrafficAutohideThreshold.setEnabled(true);
