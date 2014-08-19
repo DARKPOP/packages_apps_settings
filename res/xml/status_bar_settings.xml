@@ -18,5 +18,11 @@
 		    android:summary="@string/recents_show_searchbar_summary"
 		    android:defaultValue="false" />
 
+	    <PreferenceScreen 
+		    android:key="network_traffic_state"
+		    android:fragment="com.android.settings.simpleaosp.NetworkTraffic"
+		    android:summary="@string/network_traffic_summary"
+		    android:title="@string/network_traffic_title" />
+	    
     </PreferenceCategory>
 </PreferenceScreen>
