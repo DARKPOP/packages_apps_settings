@@ -6088,14 +6088,20 @@
     <string name="appops_sys_app">Cannot change operations for system apps</string>
     
      <!-- General strings -->
- <string name="ok">OK</string>
- <string name="reset">Reset</string>
- <string name="attention">Attention</string>
- <string name="enabled">Enabled</string>
- <string name="disabled">Disabled</string>
- <string name="default_string">Default</string>
- <string name="additional_options_title">Additional options</string>
- <string name="reset_message">Reset all entries to default?</string>
- <string name="style_title">Style</string>
- <string name="add">Add</string>
+    <string name="ok">OK</string>
+    <string name="reset">Reset</string>
+    <string name="attention">Attention</string>
+    <string name="enabled">Enabled</string>
+    <string name="disabled">Disabled</string>
+    <string name="default_string">Default</string>
+    <string name="additional_options_title">Additional options</string>
+    <string name="reset_message">Reset all entries to default?</string>
+    <string name="style_title">Style</string>
+    <string name="add">Add</string>
+ 
+    <!-- Statusbar native battery percent -->
+    <string name="general_string">General</string>
+    <string name="status_bar_title">Status bar</string>
+    <string name="status_bar_native_battery_percentage_title">Battery percentage</string>
+    <string name="status_bar_native_battery_percentage_summary">Show hidden percentage</string>
 </resources>
