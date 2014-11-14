@@ -5980,8 +5980,8 @@
    <string name="encrypt_talkback_dialog_message_password">When you enter your password to start this device, accessibility services like <xliff:g id="service" example="TalkBack">%1$s</xliff:g> won\'t yet be available.</string>
 
     <!-- Navigation Bar -->
+    <string name="navigation_bar_general_category">General</string>
     <string name="navigation_bar_title">Navigation bar</string>
-
     <!-- Navigation Bar Height -->
     <string name="navigation_bar_height">Height</string>
     <string name="navigation_bar_height_48">48dp (default)</string>
@@ -5994,8 +5994,8 @@
     <string name="navigation_bar_height_20">20dp</string>
     <string name="navigation_bar_height_0">0dp (hide)</string>
  
-    <!-- Statusbar native battery percent -->
-    <string name="general_string">General</string>
+    <!-- Status bar-->
+    <string name="status_bar_general_category">General</string>
     <string name="status_bar_title">Status bar</string>
     <string name="status_bar_native_battery_percentage_title">Battery percentage</string>
     <string name="status_bar_native_battery_percentage_summary">Show hidden percentage</string>
