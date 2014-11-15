@@ -188,4 +188,9 @@
 
     <string name="profile_setup_setup_triggers_description">Please select triggers which will activate this profile</string>
     <string name="profile_setup_actions_description">Now configure what happens when the profile is activated</string>
+
+    <!--- Advanced Settings -->
+    <string name="advanced_settings">Advanced settings</string>
+    <string name="advanced_settings_summary">Enable more settings options</string>
+
 </resources>
