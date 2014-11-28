@@ -56,8 +56,8 @@ public class AppOpsState {
         mContext = context;
         mAppOps = (AppOpsManager)context.getSystemService(Context.APP_OPS_SERVICE);
         mPm = context.getPackageManager();
-        mOpSummaries = context.getResources().getTextArray(R.array.app_ops_summaries);
-        mOpLabels = context.getResources().getTextArray(R.array.app_ops_labels);
+        mOpSummaries = context.getResources().getTextArray(R.array.app_ops_summaries_slim);
+        mOpLabels = context.getResources().getTextArray(R.array.app_ops_labels_slim);
     }
 
     public static class OpsTemplate implements Parcelable {
@@ -475,7 +475,7 @@ public class AppOpsState {
         final ArrayList<Integer> permOps = new ArrayList<Integer>();
         final int[] opToOrder = new int[AppOpsManager._NUM_OP];
         for (int i=0; i<tpl.ops.length; i++) {
-            if (tpl.showPerms[i]) {
+            if (i < tpl.showPerms.length && tpl.showPerms[i]) {
                 String perm = AppOpsManager.opToPermission(tpl.ops[i]);
                 if (perm != null && !perms.contains(perm)) {
                     perms.add(perm);
