@@ -6222,7 +6222,7 @@
     <string name="app_notification_no_ongoing_on_keyguard_title">Disable ongoing on lockscreen</string>
     <string name="app_notification_no_ongoing_on_keyguard_summary">Never show ongoing notifications from this app on the lockscreen</string>
 
-    <string name="app_security_title">App security</string>
+    <string name="app_security_title">Privacy</string>
 
    <!-- Blacklist preferences -->
     <string name="blacklist_title">Blacklist</string>
