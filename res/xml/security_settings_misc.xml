@@ -33,20 +33,6 @@
 
     </PreferenceCategory>
 
-    <PreferenceCategory
-        android:key="app_security"
-        android:title="@string/app_security_title">
-
-        <ListPreference
-            android:key="sms_security_check_limit"
-            android:dialogTitle="@string/sms_security_check_limit_title"
-            android:title="@string/sms_security_check_limit_title"
-            android:entries="@array/sms_security_check_limit_entries"
-            android:entryValues="@array/sms_security_check_limit_values"
-            android:defaultValue="30" />
-
-    </PreferenceCategory>
-
     <PreferenceCategory android:title="@string/security_passwords_title"
             android:persistent="false">
 
@@ -65,6 +51,14 @@
                 android:summary="@string/manage_device_admin_summary"
                 android:persistent="false"
                 android:fragment="com.android.settings.DeviceAdminSettings"/>
+
+        <ListPreference
+            android:key="sms_security_check_limit"
+            android:dialogTitle="@string/sms_security_check_limit_title"
+            android:title="@string/sms_security_check_limit_title"
+            android:entries="@array/sms_security_check_limit_entries"
+            android:entryValues="@array/sms_security_check_limit_values"
+            android:defaultValue="30" />
 
         <SwitchPreference android:key="toggle_install_applications"
                 android:title="@string/install_applications"
