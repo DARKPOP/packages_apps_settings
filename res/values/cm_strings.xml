@@ -158,6 +158,10 @@
 
     <string name="ok">OK</string>
 
+    <!-- Proximity wake -->
+    <string name="proximity_wake_title">Prevent accidental wake-up</string>
+    <string name="proximity_wake_summary">Check the proximity sensor prior to waking up screen</string>
+
     <!-- Profiles -->
     <string name="profile_menu_delete_title">Delete</string>
     <string name="profile_menu_triggers_title">Modify triggers</string>
