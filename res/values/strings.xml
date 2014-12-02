@@ -6076,4 +6076,7 @@
     <!-- Sound & notification > Other sounds: Title for the option enabling sound on volume slide adjust. [CHAR LIMIT=30] -->
     <string name="volume_adjust_sound_title">Volume slider sound</string>
     
+    <!-- Show/Hide Search Bar -->
+    <string name="recents_show_searchbar">Disable search bar in recents menu</string>
+    <string name="recents_show_searchbar_summary">Disable or enable the search bar in the recents menu</string>
 </resources>
