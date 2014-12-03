@@ -50,8 +50,10 @@ import com.android.settings.SettingsActivity;
 import com.android.settings.SettingsPreferenceFragment;
 import com.android.settings.SubSettings;
 import com.android.settings.Utils;
+import com.android.settings.cyanogenmod.BaseSystemSettingSwitchBar;
 
-public class ProfilesSettings extends SettingsPreferenceFragment {
+public class ProfilesSettings extends SettingsPreferenceFragment
+        implements BaseSystemSettingSwitchBar.SwitchBarChangeCallback {
     private static final String TAG = "ProfilesSettings";
 
     public static final String EXTRA_PROFILE = "Profile";
@@ -63,7 +65,7 @@ public class ProfilesSettings extends SettingsPreferenceFragment {
     private final BroadcastReceiver mReceiver;
 
     private ProfileManager mProfileManager;
-    private ProfileEnabler mProfileEnabler;
+    private BaseSystemSettingSwitchBar mProfileEnabler;
 
     private ViewPager mViewPager;
     private TextView mEmptyText;
@@ -152,7 +154,8 @@ public class ProfilesSettings extends SettingsPreferenceFragment {
     public void onStart() {
         super.onStart();
         final SettingsActivity activity = (SettingsActivity) getActivity();
-        mProfileEnabler = new ProfileEnabler(activity, activity.getSwitchBar());
+        mProfileEnabler = new BaseSystemSettingSwitchBar(activity, activity.getSwitchBar(),
+                Settings.System.SYSTEM_PROFILES_ENABLED, true, this);
     }
 
     @Override
