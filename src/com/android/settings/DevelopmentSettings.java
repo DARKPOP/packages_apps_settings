@@ -632,7 +632,7 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
         } else {
             mAdbOverNetwork.setSummary(R.string.adb_over_network_summary);
         }
-
+    }
     private void resetDevelopmentShortcutOptions() {
         Settings.Secure.putInt(getActivity().getContentResolver(),
                 Settings.Secure.DEVELOPMENT_SHORTCUT, 0);
