@@ -44,13 +44,15 @@ public class SoundSettings extends SettingsPreferenceFragment implements
     private static final String KEY_VOL_MEDIA = "volume_keys_control_media_stream";
     private static final String VOLUME_KEY_ADJUST_SOUND = "volume_key_adjust_sound";
     private static final String KEY_VOLBTN_MUSIC_CTRL = "volbtn_music_controls";
-    private static final String PREF_LESS_NOTIFICATION_SOUNDS = "less_notification_sounds";
+    private static final String PREF_LESS_NOTIFICATION_SOUNDS = "less_notification_sounds"; 
+    private static final String KEY_SWAP_VOLUME_BUTTONS = "swap_volume_buttons";
 
     private SwitchPreference mSafeHeadsetVolume;
     private SwitchPreference mVolumeKeysControlMedia;
     private SwitchPreference mVolumeKeyAdjustSound;
     private SwitchPreference mVolBtnMusicCtrl;
     private ListPreference mAnnoyingNotifications;
+    private SwitchPreference mSwapVolumeButtons;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -92,6 +94,11 @@ public class SoundSettings extends SettingsPreferenceFragment implements
             }
         } catch (SettingNotFoundException e) {
         }
+
+        mSwapVolumeButtons = (SwitchPreference) findPreference(KEY_SWAP_VOLUME_BUTTONS);
+        mSwapVolumeButtons.setChecked(Settings.System.getInt(getContentResolver(),
+                Settings.System.SWAP_VOLUME_KEYS_ON_ROTATION, 0) != 0);
+        mSwapVolumeButtons.setOnPreferenceChangeListener(this);
     }
 
     @Override
@@ -135,7 +142,12 @@ public class SoundSettings extends SettingsPreferenceFragment implements
                     Settings.System.VOLUME_MUSIC_CONTROLS,
                     (Boolean) objValue ? 1 : 0);
         }
-            return true;
+        if (KEY_SWAP_VOLUME_BUTTONS.equals(key)) {
+            Settings.System.putInt(getContentResolver(),
+                    Settings.System.SWAP_VOLUME_KEYS_ON_ROTATION,
+                    (Boolean) objValue ? 1 : 0);
+        }
+        return true;
     }
 
     private void showDialogInner(int id) {
