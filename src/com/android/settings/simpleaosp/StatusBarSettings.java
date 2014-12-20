@@ -35,8 +35,6 @@ public class StatusBarSettings extends SettingsPreferenceFragment implements
     private static final String KEY_STATUS_BAR_TICKER = "status_bar_ticker_enabled";
     private static final String STATUS_BAR_SHOW_BATTERY_PERCENT = "status_bar_show_battery_percent";
     private static final String STATUS_BAR_BATTERY_STYLE = "status_bar_battery_style";
-    private static final String STATUS_BAR_BATTERY_STYLE_HIDDEN = "4";
-    private static final String STATUS_BAR_BATTERY_STYLE_TEXT = "6";
 
     private PreferenceScreen mClockStyle;
     private ListPreference mQuickPulldown;
@@ -123,8 +121,6 @@ public class StatusBarSettings extends SettingsPreferenceFragment implements
             Settings.System.putInt(
                     cr, Settings.System.STATUS_BAR_BATTERY_STYLE, batteryStyle);
             mStatusBarBattery.setSummary(mStatusBarBattery.getEntries()[index]);
-
-            enableStatusBarBatteryDependents((String) newValue);
             return true;
         } else if (preference == mStatusBarBatteryShowPercent) {
             int batteryShowPercent = Integer.valueOf((String) newValue);
@@ -163,11 +159,5 @@ public class StatusBarSettings extends SettingsPreferenceFragment implements
                     : (isRtl ? R.string.quick_pulldown_left : R.string.quick_pulldown_right));
             mQuickPulldown.setSummary(res.getString(R.string.summary_quick_pulldown, direction));
         }
-    }
-
-    private void enableStatusBarBatteryDependents(String value) {
-        boolean enabled = !(value.equals(STATUS_BAR_BATTERY_STYLE_TEXT)
-                || value.equals(STATUS_BAR_BATTERY_STYLE_HIDDEN));
-        mStatusBarBatteryShowPercent.setEnabled(enabled);
     }
 }
