@@ -20,10 +20,10 @@ import java.util.UUID;
 
 import android.app.Profile;
 import android.app.ProfileManager;
-import android.content.Context;
 import android.os.Bundle;
 import android.preference.Preference;
 import android.preference.PreferenceScreen;
+import android.provider.Settings;
 import android.text.TextUtils;
 
 import com.android.settings.R;
@@ -33,6 +33,7 @@ import com.android.settings.Utils;
 public class ProfilesList extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
     static final String TAG = "ProfilesSettings";
+    public static final String PROFILE_SERVICE = "profile";
 
     private ProfileManager mProfileManager;
 
@@ -41,7 +42,7 @@ public class ProfilesList extends SettingsPreferenceFragment implements
         super.onCreate(savedInstanceState);
 
         addPreferencesFromResource(R.xml.profiles_settings);
-        mProfileManager = (ProfileManager) getActivity().getSystemService(Context.PROFILE_SERVICE);
+        mProfileManager = (ProfileManager) getActivity().getSystemService(PROFILE_SERVICE);
     }
 
     @Override
@@ -65,8 +66,7 @@ public class ProfilesList extends SettingsPreferenceFragment implements
 
         for (Profile profile : mProfileManager.getProfiles()) {
             Bundle args = new Bundle();
-            args.putParcelable(ProfilesSettings.EXTRA_PROFILE, profile);
-            args.putBoolean(ProfilesSettings.EXTRA_NEW_PROFILE, false);
+            args.putParcelable("Profile", profile);
 
             ProfilesPreference ppref = new ProfilesPreference(this, args);
             ppref.setKey(profile.getUuid().toString());
