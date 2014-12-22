@@ -55,18 +55,6 @@
             android:dialogTitle="@string/lock_numpad_random_dialog_title"
             android:persistent="false"/>
 
-         <PreferenceScreen
-                 android:key="lockscreen_shortcuts"
-                 android:fragment="com.android.settings.slim.dslv.ActionListViewSettings"
-                 android:summary="@string/lockscreen_shortcuts_summary"
-                 android:title="@string/lockscreen_shortcuts_title">
-             <extra android:name="actionMode" android:value="4" />
-             <extra android:name="maxAllowedActions" android:value="5" />
-             <extra android:name="disableLongpress" android:value="true" />
-             <extra android:name="useAppPickerOnly" android:value="true" />
-             <extra android:name="fragment" android:value="com.android.settings.slim.LockscreenShortcut" />
-        </PreferenceScreen>
-
         <PreferenceScreen
             android:key="owner_info_settings"
             android:fragment="com.android.settings.OwnerInfoSettings"
@@ -74,9 +62,9 @@
             android:summary="@string/owner_info_settings_summary"/>
     </PreferenceCategory>
 
-    <SwitchPreference
-            android:key="block_on_secure_keyguard"
-            android:title="@string/block_on_secure_keyguard_title"
-            android:summary="@string/block_on_secure_keyguard_summary"
-            android:persistent="false" />
+	<SwitchPreference
+	        android:key="block_on_secure_keyguard"
+	        android:title="@string/block_on_secure_keyguard_title"
+	        android:summary="@string/block_on_secure_keyguard_summary"
+	        android:persistent="false" />
 </PreferenceScreen>

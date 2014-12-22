@@ -24,7 +24,3 @@
     </item>
     <item android:drawable="@drawable/fab_accent"/>
 </ripple>
-<<<<<<< HEAD
-
-=======
->>>>>>> 6b24d5e... profiles: Make the floating action button more material-y
