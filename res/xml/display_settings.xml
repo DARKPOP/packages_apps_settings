@@ -65,14 +65,14 @@
                 android:fragment="com.android.settings.wfd.WifiDisplaySettings" />
 
         <PreferenceScreen
-        android:key="status_bar"
-        android:fragment="com.android.settings.simpleaosp.StatusBarSettings"
-        android:title="@string/status_bar_title" />
+		android:key="status_bar"
+		android:fragment="com.android.settings.simpleaosp.StatusBarSettings"
+		android:title="@string/status_bar_title" />
 
-    <PreferenceScreen
-            android:key="navigation_bar"
-            android:fragment="com.android.settings.simpleaosp.NavigationBarSettings"
-            android:title="@string/navigation_bar_title" />
+	<PreferenceScreen
+	        android:key="navigation_bar"
+	        android:fragment="com.android.settings.simpleaosp.NavigationBarSettings"
+	        android:title="@string/navigation_bar_title" />
 
         <SwitchPreference
                 android:key="lift_to_wake"
@@ -93,14 +93,9 @@
                 android:fragment="com.android.settings.simpleaosp.DisplayRotation"
                 android:title="@string/display_rotation_title" />
 
-    <PreferenceCategory
+	<PreferenceCategory
              android:key="category_wakeup_options"
              android:title="@string/display_category_wakeup_options_title" >
-
-        <SwitchPreference
-                android:key="proximity_on_wake"
-                android:title="@string/proximity_on_wake_title"
-                android:summary="@string/proximity_on_wake_summary" />
 
             <SwitchPreference
                 android:key="pref_volume_wake"
