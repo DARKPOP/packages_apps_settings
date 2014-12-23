@@ -97,7 +97,7 @@
              android:key="category_wakeup_options"
              android:title="@string/display_category_wakeup_options_title" >
 
-        <SwitchPreference
+        <com.android.settings.cyanogenmod.SystemSettingSwitchPreference
                 android:key="proximity_on_wake"
                 android:title="@string/proximity_on_wake_title"
                 android:summary="@string/proximity_on_wake_summary" />
