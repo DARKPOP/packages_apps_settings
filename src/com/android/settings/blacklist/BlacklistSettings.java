@@ -146,9 +146,9 @@ public class BlacklistSettings extends ListFragment
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.blacklist_prefs:
-                SubSettings pa = (SubSettings) getActivity();s
+                SubSettings pa = (SubSettings) getActivity();
                 pa.startPreferencePanel(BlacklistPreferences.class.getCanonicalName(), null,
-                        0, null, this, 0);
+                    0, null, this, 0);
                 return true;
         }
 
