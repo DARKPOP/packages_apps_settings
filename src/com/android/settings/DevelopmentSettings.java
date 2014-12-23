@@ -113,6 +113,8 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
     private static final String ALLOW_MOCK_LOCATION = "allow_mock_location";
     private static final String HDCP_CHECKING_KEY = "hdcp_checking";
     private static final String HDCP_CHECKING_PROPERTY = "persist.sys.hdcp_checking";
+    private static final String ENABLE_QUICKBOOT= "enable_quickboot";
+    private static final String QUICKBOOT_PACKAGE_NAME = "com.qapp.quickboot";
     private static final String LOCAL_BACKUP_PASSWORD = "local_backup_password";
     private static final String HARDWARE_UI_PROPERTY = "persist.sys.ui.hw";
     private static final String MSAA_PROPERTY = "debug.egl.force_msaa";
@@ -206,6 +208,7 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
     private SwitchPreference mKeepScreenOn;
     private SwitchPreference mBtHciSnoopLog;
     private SwitchPreference mEnableOemUnlock;
+    private SwitchPreference mQuickBoot;
     private SwitchPreference mAllowMockLocation;
     private SwitchPreference mDebugViewAttributes;
     private PreferenceScreen mPassword;
@@ -322,6 +325,7 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
             removePreference(mEnableOemUnlock);
             mEnableOemUnlock = null;
         }
+        mQuickBoot = findAndInitSwitchPref(ENABLE_QUICKBOOT);
         mAllowMockLocation = findAndInitSwitchPref(ALLOW_MOCK_LOCATION);
         mDebugViewAttributes = findAndInitSwitchPref(DEBUG_VIEW_ATTRIBUTES);
         mPassword = (PreferenceScreen) findPreference(LOCAL_BACKUP_PASSWORD);
@@ -336,6 +340,11 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
             disableForUser(mPassword);
             disableForUser(mAdvancedReboot);
             disableForUser(mDevelopmentShortcut);
+            disableForUser(mQuickBoot);
+        }
+
+        if (!isPackageInstalled(getActivity(), QUICKBOOT_PACKAGE_NAME)) {
+            removePreference(mQuickBoot);
         }
 
         mDebugAppPref = findPreference(DEBUG_APP_KEY);
@@ -557,6 +566,7 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
                 Settings.Secure.ALLOW_MOCK_LOCATION, 0) != 0);
         updateSwitchPref(mDebugViewAttributes, Settings.Global.getInt(cr,
                 Settings.Global.DEBUG_VIEW_ATTRIBUTES, 0) != 0);
+        updateSwitchPref(mQuickBoot, Settings.System.getInt(cr, ENABLE_QUICKBOOT, 0) != 0);
         updateHdcpValues();
         updatePasswordSummary();
         updateDebuggerOptions();
@@ -1466,7 +1476,7 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
             }
 
         } else if (preference == mRestartSystemUI) {
-            Helpers.restartSystemUI(); 
+            Helpers.restartSystemUI();
         } else if (preference == mAdbNotify) {
             Settings.Secure.putInt(getActivity().getContentResolver(),
                     Settings.Secure.ADB_NOTIFY,
@@ -1517,6 +1527,9 @@ public class DevelopmentSettings extends SettingsPreferenceFragment
             Settings.Global.putInt(getActivity().getContentResolver(),
                     Settings.Global.DEBUG_VIEW_ATTRIBUTES,
                     mDebugViewAttributes.isChecked() ? 1 : 0);
+        } else if (preference == mQuickBoot) {
+            Settings.System.putInt(getActivity().getContentResolver(), ENABLE_QUICKBOOT,
+                    mQuickBoot.isChecked() ? 1 : 0);
         } else if (preference == mDebugAppPref) {
             startActivityForResult(new Intent(getActivity(), AppPicker.class), RESULT_DEBUG_APP);
         } else if (preference == mWaitForDebugger) {

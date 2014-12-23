@@ -1,16 +1,13 @@
 
 package com.android.settings.simpleaosp;
 
-import android.os.Bundle;
-import android.os.UserHandle;
 import android.content.ContentResolver;
-import android.content.res.Resources;
+import android.os.Bundle;
 import android.preference.ListPreference;
 import android.preference.Preference;
-import android.preference.Preference.OnPreferenceChangeListener;
-import android.preference.PreferenceCategory;
 import android.preference.PreferenceScreen;
 import android.preference.SwitchPreference;
+import android.preference.Preference.OnPreferenceChangeListener;
 import android.provider.Settings;
 
 import com.android.settings.R;
@@ -23,22 +20,18 @@ OnPreferenceChangeListener {
     private static String NAVIGATION_BAR_GENERAL_CATEGORY = "navigation_bar_general_category";
     // Navigation bar height
     private static final String KEY_NAVIGATION_BAR_HEIGHT = "navigation_bar_height";
-    private static final String SHOW_CLEAR_ALL_RECENTS = "show_clear_all_recents";
-    private static final String RECENTS_CLEAR_ALL_LOCATION = "recents_clear_all_location";
-
-    private SwitchPreference mRecentsClearAll;
-    private ListPreference mRecentsClearAllLocation;
+    private static final String KEY_CLEAR_ALL_RECENTS_NAVBAR_ENABLED = "clear_all_recents_navbar_enabled";
 
     private ListPreference mNavigationBarHeight;
+    private SwitchPreference mClearAllRecentsNavbar;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         addPreferencesFromResource(R.xml.navigation_bar_settings);
-
-	PreferenceScreen prefSet = getPreferenceScreen();
-	ContentResolver resolver = getActivity().getContentResolver();
+	PreferenceScreen prefs = getPreferenceScreen();
+        ContentResolver resolver = getActivity().getContentResolver();
 
         mNavigationBarHeight = (ListPreference) findPreference(KEY_NAVIGATION_BAR_HEIGHT);
         mNavigationBarHeight.setOnPreferenceChangeListener(this);
@@ -48,17 +41,10 @@ OnPreferenceChangeListener {
         mNavigationBarHeight.setValue(String.valueOf(statusNavigationBarHeight));
         mNavigationBarHeight.setSummary(mNavigationBarHeight.getEntry());
 
-	mRecentsClearAll = (SwitchPreference) prefSet.findPreference(SHOW_CLEAR_ALL_RECENTS);
-        mRecentsClearAll.setChecked(Settings.System.getIntForUser(resolver,
-            Settings.System.SHOW_CLEAR_ALL_RECENTS, 1, UserHandle.USER_CURRENT) == 1);
-        mRecentsClearAll.setOnPreferenceChangeListener(this);
+	mClearAllRecentsNavbar = (SwitchPreference) prefs.findPreference(KEY_CLEAR_ALL_RECENTS_NAVBAR_ENABLED);
+        mClearAllRecentsNavbar.setChecked(Settings.System.getInt(resolver,
+                    Settings.System.CLEAR_ALL_RECENTS_NAVBAR_ENABLED, 1) == 1);
 
-        mRecentsClearAllLocation = (ListPreference) prefSet.findPreference(RECENTS_CLEAR_ALL_LOCATION);
-        int location = Settings.System.getIntForUser(resolver,
-                Settings.System.RECENTS_CLEAR_ALL_LOCATION, 0, UserHandle.USER_CURRENT);
-        mRecentsClearAllLocation.setValue(String.valueOf(location));
-        mRecentsClearAllLocation.setOnPreferenceChangeListener(this);
-        updateRecentsLocation(location);
     }
 
     public boolean onPreferenceChange(Preference preference, Object objValue) {
@@ -68,38 +54,19 @@ OnPreferenceChangeListener {
             Settings.System.putInt(getActivity().getApplicationContext().getContentResolver(),
                     Settings.System.NAVIGATION_BAR_HEIGHT, statusNavigationBarHeight);
             mNavigationBarHeight.setSummary(mNavigationBarHeight.getEntries()[index]);
-        return true;
-	} else if (preference == mRecentsClearAll) {
-            boolean show = (Boolean) objValue;
-            Settings.System.putIntForUser(getActivity().getContentResolver(),
-                    Settings.System.SHOW_CLEAR_ALL_RECENTS, show ? 1 : 0, UserHandle.USER_CURRENT);
-            return true;
-        } else if (preference == mRecentsClearAllLocation) {
-            int location = Integer.valueOf((String) objValue);
-            Settings.System.putIntForUser(getActivity().getContentResolver(),
-                    Settings.System.RECENTS_CLEAR_ALL_LOCATION, location, UserHandle.USER_CURRENT);
-            updateRecentsLocation(location);
-            return true;
         }
-        return false;
+        return true;
     }
 
-	private void updateRecentsLocation(int value) {
-        ContentResolver resolver = getContentResolver();
-        Resources res = getResources();
-        int summary = -1;
-
-        Settings.System.putInt(resolver, Settings.System.RECENTS_CLEAR_ALL_LOCATION, value);
-
-        if (value == 0) {
-            Settings.System.putInt(resolver, Settings.System.RECENTS_CLEAR_ALL_LOCATION, 0);
-            summary = R.string.recents_clear_all_location_right;
-        } else if (value == 1) {
-            Settings.System.putInt(resolver, Settings.System.RECENTS_CLEAR_ALL_LOCATION, 1);
-            summary = R.string.recents_clear_all_location_left;
+   @Override
+    public boolean onPreferenceTreeClick(PreferenceScreen preferenceScreen, Preference preference) {
+        ContentResolver resolver = getActivity().getContentResolver();
+        if (preference == mClearAllRecentsNavbar) {
+            Settings.System.putInt(resolver, Settings.System.CLEAR_ALL_RECENTS_NAVBAR_ENABLED,
+                    mClearAllRecentsNavbar.isChecked() ? 1 : 0);
+        } else {
+            return super.onPreferenceTreeClick(preferenceScreen, preference);
         }
-        if (mRecentsClearAllLocation != null && summary != -1) {
-            mRecentsClearAllLocation.setSummary(res.getString(summary));
-        }
+        return true;
     }
 }
