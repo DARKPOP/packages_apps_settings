@@ -6000,7 +6000,7 @@
     <string name="navigation_bar_height_24">24dp</string>
     <string name="navigation_bar_height_20">20dp</string>
     <string name="navigation_bar_height_0">0dp (hide)</string>
-
+ 
     <!-- Status bar-->
     <string name="status_bar_general_category">General</string>
     <string name="status_bar_title">Status bar</string>
@@ -6118,10 +6118,6 @@
     <string name="status_bar_double_tap_to_sleep_title">Double tap to sleep</string>
     <string name="status_bar_double_tap_to_sleep_summary">Double tap on the status bar to put the device to sleep</string>
 
-    <!-- Proximity Wake -->
-    <string name="proximity_on_wake_title">Proximity on wake</string>
-    <string name="proximity_on_wake_summary">Check the proximity sensor during wakeup.</string>
-
     <!-- Status bar brightness control -->
     <string name="status_bar_toggle_brightness">Brightness control</string>
     <string name="status_bar_toggle_brightness_summary">Adjust brightness by sliding finger across status bar</string>
@@ -6142,7 +6138,7 @@
     <!-- Setting checkbox summary for displaying USB debugging notification -->
     <string name="adb_notify">USB debugging notify</string>
     <string name="adb_notify_summary">Display a notification when USB debugging is connected</string>
-
+  
     <!-- Notification light dialogs -->
     <string name="edit_light_settings">Edit light settings</string>
     <string name="pulse_speed_title">Pulse length and speed</string>
@@ -6229,7 +6225,7 @@
     <!-- Status bar | Clock -->
     <string name="status_bar_clock">Clock &amp; date</string>
     <string name="status_bar_clock_title">Clock &amp; date style</string>
-    <string name="status_bar_clock_summary">Change various clock &amp; date options</string>
+    <string name="status_bar_clock_summary">Change various clock &amp; date options</string> 
     <string name="clock_title_enable">Alignment</string>
     <string name="clock_enabled">Enabled</string>
     <string name="clock_disabled">Disabled</string>
