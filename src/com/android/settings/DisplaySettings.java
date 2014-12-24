@@ -83,7 +83,7 @@ public class DisplaySettings extends SettingsPreferenceFragment implements
     private static final String KEY_VOLUME_WAKE = "pref_volume_wake";
     private static final String CATEGORY_WAKEUP = "category_wakeup_options";
     private static final String KEY_PROXIMITY_WAKE = "proximity_on_wake";
-    
+
     private static final int DLG_GLOBAL_CHANGE_WARNING = 1;
 
     private static final String ROTATION_ANGLE_0 = "0";

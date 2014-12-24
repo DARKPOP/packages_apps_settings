@@ -74,6 +74,11 @@
                 android:fragment="com.android.settings.simpleaosp.NavigationBarSettings"
                 android:title="@string/navigation_bar_title" />
 
+        <PreferenceScreen
+                android:id="@+id/power_menu"
+                android:title="@string/power_menu_settings"
+                android:fragment="com.android.settings.vanir.PowerMenuActions" />
+
         <SwitchPreference
                 android:key="lift_to_wake"
                 android:title="@string/lift_to_wake_title"
