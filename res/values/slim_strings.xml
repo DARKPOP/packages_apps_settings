@@ -15,7 +15,7 @@
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <!-- Privacy Guard -->
-    <string name="app_security_title_slim">App security</string>
+    <string name="app_security_title">App security</string>
     <string name="privacy_guard_dlg_title">Enable AppOps?</string>
     <string name="privacy_guard_dlg_text">When Privacy Guard is enabled, the app will not be able to access personal data such as contacts, messages, location or call logs.</string>
     <string name="privacy_guard_dlg_system_app_text">When enabling Privacy Guard for a built-in app, the app will not be able to access personal data such as contacts, messages, location or call logs. This may cause other apps to misbehave.</string>

@@ -19,7 +19,7 @@
 
     <PreferenceCategory
         android:key="app_security"
-        android:title="@string/app_security_title_slim">
+        android:title="@string/app_security_title">
 
          <Preference
             android:fragment="com.android.settings.applications.AppOpsSummary"
