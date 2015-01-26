@@ -3060,6 +3060,8 @@
     <!-- App Ops Settings --> <skip />
     <!-- [CHAR LIMIT=NONE] App ops settings title, on main settings screen. If clicked, the user is taken to a settings screen for app operations -->
     <string name="app_ops_settings">App ops</string>
+    <!-- [CHAR LIMIT=NONE] App ops settings summary, on main settings screen. If clicked, the user is taken to a settings screen for app operations -->
+    <string name="app_ops_settings_summary">View or change app permissions</string>
     <!-- [CHAR LIMIT=NONE] Time label for an operation that is currently running. -->
     <string name="app_ops_running">Running</string>
     <!-- [CHAR LIMIT=NONE] Time label for an operation that has never executed. -->
@@ -6049,6 +6051,9 @@
     <string name="volume_key_cursor_control_on">Volume up/down moves cursor left/right</string>
     <string name="volume_key_cursor_control_on_reverse">Volume up/down moves cursor right/left</string>
 
+    <!-- Toast message when trying to open system app AppOps -->
+    <string name="appops_sys_app">Cannot change operations for system apps</string>
+
     <!-- Developer options - kill app long press back -->
     <string name="kill_app_longpress_back">Kill app back button</string>
     <string name="kill_app_longpress_back_summary">Kill the foreground app by long-pressing the back key</string>
@@ -6389,4 +6394,10 @@
     <string name="partition_info_sdext">/sd-ext (EXT)</string>
     <string name="partition_info_used_of">/</string>
 
+    <!-- MediaScanner behavior on boot -->
+    <string name="options_settings_title">Options</string>
+    <string name="media_scanner_on_boot_title">MediaScanner behavior on boot</string>
+    <string name="media_scanner_on_boot_enabled">Scan media</string>
+    <string name="media_scanner_on_boot_ask">Ask to scan (notification)</string>
+    <string name="media_scanner_on_boot_disabled">Do not scan media</string>
 </resources>
