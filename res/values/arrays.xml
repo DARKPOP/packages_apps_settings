@@ -1279,20 +1279,4 @@
         <item>Pink</item>
         <item>Red</item>
     </string-array>
-
-    <!-- Movable navigation bar -->
-    <string-array name="nav_bar_position_entries" translatable="false">
-        <item>@string/navigation_bar_default</item>
-        <item>@string/navigation_bar_left</item>
-        <item>@string/navigation_bar_right</item>
-    </string-array>
-
-    <string-array name="nav_bar_position_values" translatable="false">
-        <!-- Default (centre) -->
-        <item>0</item>
-        <!-- Left -->
-        <item>1</item>
-        <!-- Right -->
-        <item>2</item>
-    </string-array>
 </resources>

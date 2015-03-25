@@ -46,14 +46,6 @@
                 android:fragment="com.android.settings.WallpaperTypeSettings" />
 
         <ListPreference
-                android:key="nav_bar_position"
-                android:title="@string/nav_bar_position"
-                android:entries="@array/nav_bar_position_entries"
-                android:entryValues="@array/nav_bar_position_values"
-                android:defaultValue="0"
-                android:persistent="false" />
-
-        <ListPreference
                 android:key="screen_timeout"
                 android:title="@string/screen_timeout"
                 android:summary="@string/screen_timeout_summary"

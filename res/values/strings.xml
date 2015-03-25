@@ -6061,13 +6061,7 @@
    
     <!-- App Ops -->
     <string name="app_ops_title">App Ops</string>
-    <string name="app_ops_summary">Fine-grained application permission controls</string>
-
-    <!-- Navigation bar position -->
-    <string name="nav_bar_position">Navigation Bar Position</string>
-    <string name="navigation_bar_default">Default (Center)</string>
-    <string name="navigation_bar_left">Left</string>
-    <string name="navigation_bar_right">Right</string>
+    <string name="app_ops_summary">Fine-grained application permission controls</string> 
 
     <!--Quick unlock -->
     <string name="unlock_quick_unlock_control_title">Quick unlock</string>
