@@ -834,10 +834,11 @@
                 android:value="com.android.settings.notification.NotificationStation" />
         </activity>
 
+        <!--
         <activity android:name="Settings$AppOpsSummaryActivity"
                 android:label="@string/app_ops_settings"
                 android:taskAffinity=""
-                android:excludeFromRecents="true">
+                android:enabled="false">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <action android:name="android.settings.APP_OPS_SETTINGS" />
@@ -850,6 +851,7 @@
             <meta-data android:name="com.android.settings.TOP_LEVEL_HEADER_ID"
                 android:resource="@id/application_settings" />
         </activity>
+        -->
 
         <activity android:name="Settings$LocationSettingsActivity"
                 android:label="@string/location_settings_title"
