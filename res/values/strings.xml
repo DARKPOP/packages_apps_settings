@@ -6073,4 +6073,17 @@
     <!-- Show/Hide Search Bar -->
     <string name="recents_show_searchbar">Disable search bar in recents menu</string>
     <string name="recents_show_searchbar_summary">Disable or enable the search bar in the recents menu</string>
+
+    <!-- Navigation Bar -->
+    <string name="navigation_bar_title">Buttons and layout</string>
+    <string name="navigation_bar_help_text">To get started tap the edit icon to unlock the navigation bar for editing.\n\nYou can tap an icon to change its shortcut, or long press an icon to re-arrange the layout.\n\nTap save to commit your changes, or restore to reset the layout to default settings.</string>
+    <string name="navigation_restore_button_text">Restore\ndefaults</string>
+    <string name="navigation_edit_button_text">Edit</string>
+    <string name="navigation_save_button_text">Save</string>
+    <string name="navigation_bar_reset_message">Delete current settings and restore the default layout?</string>
+
+     <!-- Reset Profiles -->
+	<string name="profile_reset_title">Reset</string>
+	<string name="ok">OK</string>
+
 </resources>
