@@ -51,5 +51,10 @@
     <SwitchPreference android:key="24 hour"
         android:title="@string/date_time_24hour"
         />
+    <PreferenceScreen
+        android:key="clock_style_pref"
+        android:fragment="com.android.settings.terminus.StatusBarClockStyle"
+        android:title="@string/status_bar_clock" 
+        />
 
 </PreferenceScreen>
