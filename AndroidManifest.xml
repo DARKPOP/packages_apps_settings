@@ -207,7 +207,7 @@
         </activity>
 
         <activity android:name=".wifi.WifiSettingsForSetupWizardXL"
-                android:theme="@android:style/Theme.Material.NoActionBar"
+                android:theme="@android:style/Theme.Material.Light.NoActionBar"
                 android:screenOrientation="behind"
                 android:clearTaskOnLaunch="true"
                 android:windowSoftInputMode="adjustResize"
@@ -442,7 +442,7 @@
 
         <activity android:name="DateTimeSettingsSetupWizard"
                   android:label="@string/date_and_time"
-                  android:theme="@android:style/Theme.Material.NoActionBar"
+                  android:theme="@android:style/Theme.Material.Light.NoActionBar"
                   android:screenOrientation="behind">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -583,7 +583,7 @@
 
         <activity android:name=".inputmethod.UserDictionaryAddWordActivity"
                   android:label="@string/user_dict_settings_title"
-                  android:theme="@android:style/Theme.Material.Dialog.NoActionBar"
+                  android:theme="@android:style/Theme.Material.Light.Dialog.NoActionBar"
                   android:windowSoftInputMode="stateVisible"
                   android:noHistory="true"
                   android:excludeFromRecents="true">
@@ -694,7 +694,7 @@
 
         <activity android:name="SettingsLicenseActivity"
                 android:label="@string/settings_license_activity_title"
-                android:theme="@android:style/Theme.Material.Panel"
+                android:theme="@android:style/Theme.Material.Light.Panel"
                 android:configChanges="orientation|screenSize">
             <intent-filter>
                 <action android:name="android.settings.LICENSE" />
@@ -1361,7 +1361,7 @@
         </activity-alias>
 
         <activity android:name=".AppPicker" android:label="@string/select_application"
-                android:theme="@*android:style/Theme.Material.Dialog.Alert.Dark" />
+                android:theme="@android:style/Theme.Material.Light.Dialog" />
 
         <activity android:name="Settings$UsbSettingsActivity"
                 android:label="@string/storage_title_usb"
@@ -1397,7 +1397,7 @@
         <activity android:name=".bluetooth.BluetoothPairingDialog"
                   android:label="@string/bluetooth_pairing_request"
                   android:excludeFromRecents="true"
-                  android:theme="@*android:style/Theme.Material.Dialog.Alert.Dark">
+                  android:theme="@*android:style/Theme.Material.Light.Dialog.Alert">
             <intent-filter>
                 <action android:name="android.bluetooth.device.action.PAIRING_REQUEST" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -1430,7 +1430,7 @@
                   android:label="@string/bluetooth_permission_request"
                   android:excludeFromRecents="true"
                   android:permission="android.permission.BLUETOOTH"
-                  android:theme="@*android:style/Theme.Material.Dialog.Alert.Dark">
+                  android:theme="@*android:style/Theme.Material.Light.Dialog.Alert">
             <intent-filter>
                 <action android:name="android.bluetooth.adapter.action.REQUEST_DISCOVERABLE" />
                 <action android:name="android.bluetooth.adapter.action.REQUEST_ENABLE" />
@@ -1451,7 +1451,7 @@
                   android:label="@string/bluetooth_pairing_request"
                   android:excludeFromRecents="true"
                   android:permission="android.permission.BLUETOOTH"
-                  android:theme="@*android:style/Theme.Material.Dialog.Alert.Dark">
+                  android:theme="@*android:style/Theme.Material.Light.Dialog.Alert">
         </activity>
 
         <receiver android:name=".bluetooth.BluetoothPairingRequest">
@@ -1474,7 +1474,7 @@
                   android:label="@string/bluetooth_connection_permission_request"
                   android:excludeFromRecents="true"
                   android:permission="android.permission.BLUETOOTH_ADMIN"
-                  android:theme="@*android:style/Theme.Material.Dialog.Alert.Dark">
+                  android:theme="@*android:style/Theme.Material.Light.Dialog.Alert">
             <intent-filter>
                 <action android:name="android.bluetooth.device.action.CONNECTION_ACCESS_REQUEST" />
                 <action android:name="android.bluetooth.device.action.CONNECTION_ACCESS_CANCEL" />
@@ -1484,7 +1484,7 @@
 
         <activity android:name="ActivityPicker"
                 android:label="@string/activity_picker_label"
-                android:theme="@*android:style/Theme.Material.Dialog.Alert.Dark"
+                android:theme="@*android:style/Theme.Material.Light.Dialog.Alert"
                 android:finishOnCloseSystemDialogs="true">
             <intent-filter>
                 <action android:name="android.intent.action.PICK_ACTIVITY" />
@@ -1598,7 +1598,7 @@
         <!-- Standard picker for widgets -->
         <activity android:name="AppWidgetPickActivity"
                 android:label="@string/widget_picker_title"
-                android:theme="@*android:style/Theme.Material.Dialog.Alert.Dark"
+                android:theme="@*android:style/Theme.Material.Light.Dialog.Alert"
                 android:finishOnCloseSystemDialogs="true">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_PICK" />
@@ -1607,7 +1607,7 @@
         </activity>
 
         <activity android:name="AllowBindAppWidgetActivity"
-                android:theme="@*android:style/Theme.Material.Dialog.Alert.Dark"
+                android:theme="@*android:style/Theme.Material.Light.Dialog.Alert"
                 android:finishOnCloseSystemDialogs="true"
                 android:excludeFromRecents="true">
             <intent-filter>
@@ -1827,7 +1827,7 @@
         <activity android:name=".nfc.PaymentDefaultDialog"
                   android:label="@string/nfc_payment_set_default_label"
                   android:excludeFromRecents="true"
-                  android:theme="@*android:style/Theme.Material.Dialog.Alert.Dark">
+                  android:theme="@*android:style/Theme.Material.Light.Dialog.Alert">
             <intent-filter>
                 <action android:name="android.nfc.cardemulation.action.ACTION_CHANGE_DEFAULT" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -1839,7 +1839,7 @@
         <activity android:name=".SmsDefaultDialog"
                   android:label="@string/sms_application_title"
                   android:excludeFromRecents="true"
-                  android:theme="@*android:style/Theme.Material.Dialog.Alert.Dark">
+                  android:theme="@*android:style/Theme.Material.Light.Dialog.Alert">
             <intent-filter>
                 <action android:name="android.provider.Telephony.ACTION_CHANGE_DEFAULT" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -1849,7 +1849,7 @@
         <activity android:name=".ActiveNetworkScorerDialog"
                   android:label="@string/wifi_assistant_title"
                   android:excludeFromRecents="true"
-                  android:theme="@*android:style/Theme.Material.Dialog.Alert.Dark">
+                  android:theme="@*android:style/Theme.Material.Light.Dialog.Alert">
             <intent-filter>
                 <action android:name="android.net.scoring.CHANGE_ACTIVE" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -2048,7 +2048,7 @@
         </activity>
 
         <activity android:name=".sim.SimDialogActivity"
-                android:theme="@android:style/Theme.Material.Dialog.NoActionBar"
+                android:theme="@android:style/Theme.Material.Light.Dialog.NoActionBar"
                 android:label="@string/sim_settings_title"
                 android:excludeFromRecents="true">
             <intent-filter>
