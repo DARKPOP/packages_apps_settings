@@ -12,10 +12,11 @@
                     android:title="@string/status_bar_native_battery_percentage_title"
                     android:summary="@string/status_bar_native_battery_percentage_summary" />
 
-            <PreferenceScreen
-                    android:key="clock_style_pref"
-                    android:fragment="com.android.settings.terminus.StatusBarClockStyle"
-                    android:title="@string/status_bar_clock" />
+	    <com.android.settings.optipop.SystemSettingSwitchPreference
+		    android:key="recents_show_hide_search_bar"
+		    android:title="@string/recents_show_searchbar"
+		    android:summary="@string/recents_show_searchbar_summary"
+		    android:defaultValue="false" />
 
     </PreferenceCategory>
 </PreferenceScreen>
