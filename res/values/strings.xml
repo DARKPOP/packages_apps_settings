@@ -6526,7 +6526,7 @@
     <string name="screen_recorder_bitrate_20000000">20000000</string>
     <string name="screen_recorder_record_audio_title">External audio</string>
     <string name="screen_recorder_record_audio_summary">Record audio from the microphone</string>
-   
+
     <!-- Power menu -->
     <string name="power_menu_title">Power menu</string>
     <string name="power_menu_reboot_title">Reboot menu</string>
@@ -6564,7 +6564,7 @@
     <string name="recents_show_searchbar_summary">Disable or enable the search bar in the recents menu</string>
 
     <!-- Silent mode -->
-    <string name="none_is_silent_title">Never mute alarms</string>
+    <string name="none_is_silent_title">None is Silent mode</string>
     <string name="none_is_silent_summary">Silent mode always sounds alarms</string>
     <string name="allow_lights_title">Allow notification lights in zen mode</string>
 
@@ -6609,8 +6609,9 @@
     <string name="mount_notification_title">Mount notification</string>
     <string name="mount_notification_summary">Display ongoing notification for mounted storage</string>
 
-    <!-- Screenshot sound -->
-    <string name="screenshot_sound_title">Screenshot sound</string>
+    <!-- Swap Volume Buttons -->
+    <string name="swap_volume_buttons_title">Reorient</string>
+    <string name="swap_volume_buttons_summary">Swap volume buttons when the screen is rotated</string>
 
     <!-- Less Notification sounds -->
     <string name="notifications_category_title">Notifications</string>
@@ -6636,10 +6637,10 @@
     <string name="wakelock_blocker_warning_title">Proceed with caution</string>
     <string name="wakelock_blocker_warning">Blocking wakelocks have the potential to cause instability, crashes or data loss</string>
 
-    <!-- Swap Volume Buttons -->
-    <string name="swap_volume_buttons_title">Reorient</string>
-    <string name="swap_volume_buttons_summary">Swap volume buttons when the screen is rotated</string>
+    <!-- Screenshot sound -->
+    <string name="screenshot_sound_title">Screenshot sound</string>
 
     <!-- Navring targets (enable/disable) -->
     <string name="navigation_ring_enable_title">Enable navigation rings</string>
+
 </resources>
