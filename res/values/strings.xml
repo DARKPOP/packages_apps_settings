@@ -6141,7 +6141,7 @@
     <string name="recents_clear_all_location_bottom_left">Bottom left</string>
 
     <!-- UI customization settings -->
-    <string name="ui_customization_title">ui customization</string>
+    <string name="ui_customization_title">UI customization</string>
     <string name="animation_scale_settings">Animation scale settings</string>
     <!-- scaling factor for window animations [CHAR LIMIT=25] -->
     <string name="window_animation_scale_title">Window animation scale</string>
