@@ -117,6 +117,7 @@ import com.android.settings.wifi.AdvancedWifiSettings;
 import com.android.settings.wifi.SavedAccessPointsWifiSettings;
 import com.android.settings.wifi.WifiSettings;
 import com.android.settings.wifi.p2p.WifiP2pSettings;
+import com.android.settings.WifiCallingSettings;
 
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
@@ -311,6 +312,7 @@ public class SettingsActivity extends Activity
             BlacklistSettings.class.getName(),         
             DisplayRotation.class.getName(),          
             ExpandedDesktopPreferenceFragment.class.getName()
+            WifiCallingSettings.class.getName()
     };
 
 
