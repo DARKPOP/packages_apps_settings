@@ -311,7 +311,7 @@ public class SettingsActivity extends Activity
             ApnSettings.class.getName(),
             BlacklistSettings.class.getName(),         
             DisplayRotation.class.getName(),          
-            ExpandedDesktopPreferenceFragment.class.getName()
+            ExpandedDesktopPreferenceFragment.class.getName(),
             WifiCallingSettings.class.getName()
     };
 
